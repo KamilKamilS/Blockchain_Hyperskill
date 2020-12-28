@@ -2,15 +2,46 @@ package blockchain;
 
 public class Block {
 
-    int id;
-    long timestamp;
-    String previousHash;
-    String currentHash;
+    private int id;
+    private long timestamp;
+    private String previousHash;
+    private String currentHash;
+    private String message;
 
-    public Block(int id, long timestamp, String previousHash, String currentHash) {
+    public Block(int id, long timestamp, String message, String previousHash, String currentHash) {
         this.id = id;
         this.timestamp = timestamp;
+        this.message = message;
         this.previousHash = previousHash;
         this.currentHash = currentHash;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public String getPreviousHash() {
+        return previousHash;
+    }
+
+    public String getCurrentHash() {
+        return currentHash;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public String toString() {
+        return "Block:\n" +
+                "Id: " + id +
+                "\nTimestamp: " + timestamp +
+                "\nHash of the previous block: " + previousHash +
+                "\nHash of the block: " + currentHash;
     }
 }
