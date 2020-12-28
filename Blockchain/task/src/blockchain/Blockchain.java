@@ -18,15 +18,15 @@ public class Blockchain {
         return chain;
     }
 
-    Block generateNewBlock() {
+    void generateNewBlock() {
         Block block;
         if (id == 1) {
             block = new Block(id, new Date().getTime(), "A", "0", HashUtil.applySha256(String.valueOf("A")));
         } else {
             block = new Block(id, new Date().getTime(), "A", chain[id - 2].getCurrentHash(), HashUtil.applySha256(String.valueOf("A")));
         }
+        chain[id - 1] = block;
         id++;
-        return block;
     }
 
     boolean validate() {

@@ -41,7 +41,7 @@ public class Block {
         return "Block:\n" +
                 "Id: " + id +
                 "\nTimestamp: " + timestamp +
-                "\nHash of the previous block: " + previousHash +
-                "\nHash of the block: " + currentHash;
+                "\nHash of the previous block:\n" + previousHash +
+                "\nHash of the block:\n" + currentHash;
     }
 }
