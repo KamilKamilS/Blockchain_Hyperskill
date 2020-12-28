@@ -38,8 +38,8 @@ public class Block {
 
     @Override
     public String toString() {
-        return "Block:\n" +
-                "Id: " + id +
+        return "Block:" +
+                "\nId: " + id +
                 "\nTimestamp: " + timestamp +
                 "\nHash of the previous block:\n" + previousHash +
                 "\nHash of the block:\n" + currentHash;

@@ -13,8 +13,7 @@ public class AppRunner {
 
     static void printAllBlocks() {
         for (Block block : blockchain.getChain()) {
-            System.out.println(block);
-            System.out.println();
+            System.out.println(block + "\n");
         }
     }
 }
